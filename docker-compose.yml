@@ -8,7 +8,3 @@ services:
     image: 21stdigital/nginx-php
     ports:
       - 80:80
-    volumes:
-      - ./php/wordpress.dev.ini:/etc/php/7.2/mods-available/wordpress.ini
-      - ./xdebug/xdebug.dev.ini:/etc/php/7.2/mods-available/xdebug.ini
-      - ./php/wordpress.dev.conf:/etc/php/7.2/fpm/pool.d/wordpress.conf
