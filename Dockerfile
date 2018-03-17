@@ -26,15 +26,15 @@ RUN add-apt-repository -y ppa:ondrej/php && \
 
 # PHP configuration
 COPY php/php-fpm.conf /etc/php/7.2/fpm/php-fpm.conf
-COPY php/wordpress.conf /etc/php/7.2/fpm/pool.d/wordpress.conf
-COPY php/wordpress.ini /etc/php/7.2/mods-available/wordpress.ini
+COPY php/wordpress.dev.conf /etc/php/7.2/fpm/pool.d/wordpress.conf
+COPY php/wordpress.dev.ini /etc/php/7.2/mods-available/wordpress.ini
 RUN ln -sf /etc/php/7.2/mods-available/wordpress.ini /etc/php/7.2/fpm/conf.d/90-wordpress.ini
 
 # Install Xdebug
 RUN apt update && apt install -y php-xdebug
 
 # Xdebug configuration
-COPY xdebug/xdebug.ini /etc/php/7.2/mods-available/xdebug.ini
+COPY xdebug/xdebug.dev.ini /etc/php/7.2/mods-available/xdebug.ini
 
 # Add Nginx PPA & install Nginx
 RUN add-apt-repository -y ppa:nginx/development && \

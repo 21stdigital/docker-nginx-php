@@ -5,6 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: 21stdigital/nginx-php
+    image: 21stdigital/nginx-php:develop
     ports:
       - 80:80
