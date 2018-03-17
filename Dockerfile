@@ -21,7 +21,7 @@ RUN apt update && \
 # Add PHP 7.2 PPA and install PHP 7.2
 RUN add-apt-repository -y ppa:ondrej/php && \
     apt update && \
-    apt install -y php7.2-cli php7.2-common php7.2-curl php7.2-dev php7.2-fpm php7.2-gd php7.2-mbstring php7.2-mysql php7.2-opcache php7.2-xml php7.2-xmlrpc php7.2-zip php-memcached && \
+    apt install -y php7.2-common php7.2-curl php7.2-dev php7.2-fpm php7.2-gd php7.2-mbstring php7.2-mysql php7.2-opcache php7.2-tidy php7.2-xml php7.2-xmlrpc php7.2-zip php-memcache php-memcached php-redis && \
     mv /etc/php/7.2/fpm/pool.d/www.conf /etc/php/7.2/fpm/pool.d/www.disabled
 
 # PHP configuration
